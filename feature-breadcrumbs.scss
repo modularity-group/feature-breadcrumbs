@@ -1,0 +1,58 @@
+// generate_editor_styles=true
+
+.feature-breadcrumbs {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+
+  ul.breadcrumbs {
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+
+    a {
+      padding: 5px 0;
+      display: inline-block;
+    }
+
+    li {
+      display: inline-block;
+      position: relative;
+      padding-right: 8px;
+      margin-right: 4px;
+      vertical-align: middle;
+
+      &:after {
+        content: '/';
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translate(50%, -50%);
+      }
+
+      &:last-child {
+        font-weight: bold;
+        margin-right: 0;
+        padding-right: 0;
+      }
+
+      &:last-child:after {
+        display: none;
+      }
+
+      &:last-child span {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        display: block;
+
+        @media (max-width: 999px) {
+          max-width: 300px;
+        }
+
+        @media (max-width: 599px) {
+          max-width: 200px;
+        }
+      }
+    }
+  }
+}
